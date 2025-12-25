@@ -1,16 +1,143 @@
-# React + Vite
+# Student Assessment Report Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **functional prototype** of a Student Speaking Assessment Report Page, similar to platforms like SpeechAce and IELTS score reports.  
+This project demonstrates frontend skills, basic data handling, and logical code structure.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Features
 
-## React Compiler
+- **Overall Score**
+  - Displays the student’s overall score (out of 9) dynamically.
+  - Circular progress bar for visual representation.
+  
+- **Skill-wise Scores**
+  - Pronunciation
+  - Fluency
+  - Vocabulary
+  - Grammar
+  - Displayed using animated progress bars and a Radar chart.
+  
+- **Graphical Representation**
+  - Radar chart using Chart.js.
+  - Progress bars for each skill for intuitive visualization.
+  
+- **Descriptive Feedback**
+  - Feedback is generated per skill based on the score.
+  - Dynamic feedback changes with the selected rubric and scores.
+  
+- **Multiple Rubrics**
+  - Supports IELTS, PTS, TOEFL, and Custom rubrics.
+  - Users can switch between rubrics to see different scores and feedback.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React, Tailwind CSS
+- **Charts:** Chart.js
+- **Data Source:** JSON file (`report.json`) in `src/data`
+- **No backend required** (JSON file used as data source)
+
+---
+
+## 📁 Project Structure
+
+student-assessment-report/
+├─ public/
+├─ src/
+│ ├─ components/
+│ │ ├─ OverallScore.jsx
+│ │ ├─ SkillCards.jsx
+│ │ ├─ SkillChart.jsx
+│ │ └─ FeedbackSection.jsx
+│ ├─ data/
+│ │ └─ report.json
+│ ├─ utils/
+│ │ └─ feedback.js
+│ └─ App.jsx
+├─ package.json
+└─ README.md
+
+## ⚡ How to Run
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Smriti055/Student-Assessment-Report-Page.git
+
+cd Student-Assessment-Report-Page
+
+npm install
+
+npm run dev
+
+Open the URL shown in the terminal (usually http://localhost:5173) in your browser to view the report page.
+
+```markdown
+---
+
+## 📊 Data
+
+Student assessment data is stored in `src/data/report.json`. Supports multiple rubrics: IELTS, PTS, TOEFL, Custom.
+
+{
+  "studentName": "John Doe",
+  "rubrics": {
+    "ielts": {
+      "overallScore": 7.2,
+      "skills": {
+        "pronunciation": 7,
+        "fluency": 8,
+        "vocabulary": 6.5,
+        "grammar": 7
+      }
+    },
+    "pts": {
+      "overallScore": 6.8,
+      "skills": {
+        "pronunciation": 6.5,
+        "fluency": 7,
+        "vocabulary": 7,
+        "grammar": 6.5
+      }
+    },
+    "toefl": {
+      "overallScore": 7.5,
+      "skills": {
+        "pronunciation": 7.5,
+        "fluency": 8,
+        "vocabulary": 7,
+        "grammar": 7.5
+      }
+    },
+    "custom": {
+      "overallScore": 6.9,
+      "skills": {
+        "pronunciation": 6.5,
+        "fluency": 7,
+        "vocabulary": 6.8,
+        "grammar": 7
+      }
+    }
+  }
+}
+
+
+---
+
+## 📝 Feedback Logic
+
+Feedback is generated dynamically in `src/utils/feedback.js`.
+
+- **Score ranges**:
+  - ≥ 8 → Excellent performance
+  - 6–7 → Good performance with minor inaccuracies
+  - < 6 → Needs improvement
+
+Feedback is skill-specific and rubric-specific (IELTS, PTS, TOEFL, Custom).
+
+
+
+
+
