@@ -43,7 +43,7 @@ This project demonstrates frontend skills, basic data handling, and logical code
 
 ## 📁 Project Structure
 
-student-assessment-report/
+student-assessment-report/<br>
 ├─ public/
 ├─ src/
 │ ├─ components/
