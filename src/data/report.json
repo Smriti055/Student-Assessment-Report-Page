@@ -1,0 +1,42 @@
+
+{
+  "studentName": "John Doe",
+  "rubrics": {
+    "ielts": {
+      "overallScore": 7.2,
+      "skills": {
+        "pronunciation": 7,
+        "fluency": 8,
+        "vocabulary": 6.5,
+        "grammar": 7
+      }
+    },
+    "pte": {
+      "overallScore": 6.8,
+      "skills": {
+        "pronunciation": 6.5,
+        "fluency": 7,
+        "vocabulary": 7,
+        "grammar": 6.5
+      }
+    },
+    "toefl": {
+      "overallScore": 7.5,
+      "skills": {
+        "pronunciation": 7.5,
+        "fluency": 8,
+        "vocabulary": 7,
+        "grammar": 7.5
+      }
+    },
+    "custom": {
+      "overallScore": 6.9,
+      "skills": {
+        "pronunciation": 6.5,
+        "fluency": 7,
+        "vocabulary": 6.8,
+        "grammar": 7
+      }
+    }
+  }
+}
