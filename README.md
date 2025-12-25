@@ -44,19 +44,19 @@ This project demonstrates frontend skills, basic data handling, and logical code
 ## 📁 Project Structure
 
 student-assessment-report/<br>
-├─ public/
-├─ src/
-│ ├─ components/
-│ │ ├─ OverallScore.jsx
-│ │ ├─ SkillCards.jsx
-│ │ ├─ SkillChart.jsx
-│ │ └─ FeedbackSection.jsx
-│ ├─ data/
-│ │ └─ report.json
-│ ├─ utils/
-│ │ └─ feedback.js
-│ └─ App.jsx
-├─ package.json
+├─ public/<br>
+├─ src/<br>
+│ ├─ components/<br>
+│ │ ├─ OverallScore.jsx<br>
+│ │ ├─ SkillCards.jsx<br>
+│ │ ├─ SkillChart.jsx<br>
+│ │ └─ FeedbackSection.jsx<br>
+│ ├─ data/<br>
+│ │ └─ report.json<br>
+│ ├─ utils/<br>
+│ │ └─ feedback.js<br>
+│ └─ App.jsx<br>
+├─ package.json<br>
 └─ README.md
 
 ## ⚡ How to Run
