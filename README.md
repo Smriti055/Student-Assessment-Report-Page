@@ -74,10 +74,7 @@ npm run dev
 
 Open the URL shown in the terminal (usually http://localhost:5173) in your browser to view the report page.
 
-```markdown
----
-
-## 📊 Data
+📊 Data
 
 Student assessment data is stored in `src/data/report.json`. Supports multiple rubrics: IELTS, PTS, TOEFL, Custom.
 
@@ -123,14 +120,11 @@ Student assessment data is stored in `src/data/report.json`. Supports multiple r
   }
 }
 
-
----
-
-## 📝 Feedback Logic
+📝 Feedback Logic
 
 Feedback is generated dynamically in `src/utils/feedback.js`.
 
-- **Score ranges**:
+- Score ranges:
   - ≥ 8 → Excellent performance
   - 6–7 → Good performance with minor inaccuracies
   - < 6 → Needs improvement
